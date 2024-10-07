@@ -1,0 +1,17 @@
+{
+  "version": "1", 
+  "name": "Transfers",
+  "abis": {
+    "Transfers": {
+      "path": "./usdt-erc20.abi.json"
+    }
+  },
+  "instances": [
+    {
+      "abi": "Transfers", 
+      "address": "0x6665a6Cae3F52959f0f653E3D04270D54e6f13d8", 
+      "startBlock": 5747232, 
+      "chain": "oasis-sapphire-mainnet"
+    }
+  ]
+}

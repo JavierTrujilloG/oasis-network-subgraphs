@@ -1,0 +1,26 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: usdt
+    network: oasis-sapphire-mainnet
+    source:
+      address: "0x6665a6Cae3F52959f0f653E3D04270D54e6f13d8"
+      abi: ERC20
+      startBlock: 5747232
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Token
+        - Account
+        - TokenBalance
+      abis:
+        - name: ERC20
+          file: usdt/abis/ERC20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: usdt/usdt.wasm
